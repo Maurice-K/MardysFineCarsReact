@@ -1,0 +1,23 @@
+import { Grid, Typography } from '@mui/material';
+import Car from './Car';
+import './Cars.css';
+
+const Cars = ({ cars }) => {
+  const renderedCars = cars.map((car) => {
+    return (
+      <Grid item xs={2} md={3} key={car.id}>
+        <Car car={car} />
+      </Grid>
+    );
+  });
+
+  return renderedCars.length === 0 ? (
+    <Typography variant='h1' textAlign='center' >No cars</Typography>
+  ) : (
+    <Grid container spacing={4}>
+      {renderedCars}
+    </Grid>
+  );
+};
+
+export default Cars;
