@@ -1,7 +1,6 @@
 .header {
-  height: 100vh;
-  background-image: url(../assets/download.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
+	height: 50vh;
+	background-image: url(../assets/download.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }

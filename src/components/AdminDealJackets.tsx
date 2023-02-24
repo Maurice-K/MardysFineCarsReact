@@ -19,7 +19,7 @@ const AdminDealJackets = () => {
 			description: 'This column has a value getter and is not sortable.',
 			sortable: false,
 			width: 160,
-			valueGetter: (params) =>
+			valueGetter: (params: any) =>
 				`${params.row.firstName || ''} ${params.row.lastName || ''}`,
 		},
 	];
@@ -48,7 +48,7 @@ const AdminDealJackets = () => {
 				/>
 			</div>
 			<Button>
-				<FileUploadOutlined fontSize='large'/>
+				<FileUploadOutlined fontSize='large' />
 			</Button>
 		</Stack>
 	);

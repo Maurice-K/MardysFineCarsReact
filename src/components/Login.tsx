@@ -3,17 +3,17 @@ import { useState } from 'react';
 
 const Login = () => {
 	const [credentials, setCredentials] = useState({
-    username: '',
-    password: ''
-  });
+		username: '',
+		password: '',
+	});
 
-	const onCredentialsChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
+	const onCredentialsChange = (event: any) => {
+		const name = event.target.name;
+		const value = event.target.value;
 		setCredentials({ ...credentials, [name]: value });
 	};
 
-	const onLogin = (event) => {
+	const onLogin = (event: any) => {
 		event.preventDefault();
 		console.log(credentials);
 	};
@@ -31,12 +31,13 @@ const Login = () => {
 					<TextField
 						label='password'
 						name='password'
-            type='password'
+						type='password'
 						value={credentials.password}
 						onChange={onCredentialsChange}
 					/>
-          <Button type='submit' variant='contained' >Login</Button>
-
+					<Button type='submit' variant='contained'>
+						Login
+					</Button>
 				</Stack>
 			</Container>
 		</form>
